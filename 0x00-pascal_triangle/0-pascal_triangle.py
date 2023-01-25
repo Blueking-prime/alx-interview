@@ -38,7 +38,7 @@ def pascal_triangle(n):
         List: nested list representaion of the triangle
     '''
     if n <= 0:
-        return []
+        return [[]]
 
     triangle = []
     i = 0
