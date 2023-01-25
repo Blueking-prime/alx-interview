@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 '''Creates a pascals triangle'''
-from math import comb
 
 
 def f(n):
