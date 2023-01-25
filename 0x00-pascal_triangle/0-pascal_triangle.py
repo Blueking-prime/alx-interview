@@ -3,11 +3,19 @@
 from math import comb
 
 
+def f(n):
+    '''Find the factorial of n'''
+    if n == 0 or n == 1:
+        return 1
+
+    return n * f(n - 1)
+
+
 def expand(n):
     '''Finds the Binominal expansion of n
 
     Args:
-        n (Int): number to be expanded
+        n (int): number to be expanded
 
     Returns:
         List: expansion of n
@@ -15,7 +23,7 @@ def expand(n):
     row = []
     i = 0
     while i <= n:
-        row.append(comb(n, i))
+        row.append(int(f(n) / (f(i) * f(n - i))))
         i += 1
 
     return row
