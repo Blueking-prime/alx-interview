@@ -1,0 +1,1 @@
+create a pascal's triangle from a number
