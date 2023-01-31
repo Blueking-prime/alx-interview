@@ -11,14 +11,14 @@ def canUnlockAll(boxes):
     Returns:
         'true' if all the boxes can be opened and 'false' otherwise
     '''
-    keys = set(boxes[0]) # Converted to a set to prevent repeat keys
+    keys = set(boxes[0])  # Converted to a set to prevent repeat keys
     keys.add(0)
 
     loop = 1
 
     # Loops through list of boxes every time a box is opened
     while loop <= len(boxes):
-        newkeys = [] # Contains keys found in this loop
+        newkeys = []  # Contains keys found in this loop
         for i in keys:
             try:
                 for j in boxes[i]:
