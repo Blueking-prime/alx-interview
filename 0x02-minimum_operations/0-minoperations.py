@@ -2,15 +2,15 @@
 '''Finds minimum operations to edit a file'''
 
 
-def minOperations(n: int) -> int:
+def minOperations(n):
     '''Finds minimum operations to paste 'H' n times'''
     if n == 1:
         return 0
     if n == 2:
         return 2
 
-    copy: int = 1
-    paste: int = 1
+    copy = 1
+    paste = 1
     h_count = 2
     factor = 2
     check = True
