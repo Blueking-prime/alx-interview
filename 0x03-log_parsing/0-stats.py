@@ -18,6 +18,13 @@ try:
             file_size_reg_match = re.compile(comp_str_3)
             rty = file_size_reg_match.search(line)
             status_code, file_size = rty.groups()  # type: ignore
+            if line_count == 10:
+                line_count = 0
+                print('File size: {}'.format(total_size))
+                for i in code_no:
+                    if code_no[i]:
+                        print('{}: {}'.format(i, code_no[i]))
+            line_count += 1
             try:
                 file_size = int(file_size)
                 total_size += file_size
@@ -27,13 +34,6 @@ try:
                     code_no[status_code] += 1
             except ValueError:
                 pass
-            line_count += 1
-            if line_count == 10:
-                line_count = 0
-                print('File size: {}'.format(total_size))
-                for i in code_no:
-                    if code_no[i]:
-                        print('{}: {}'.format(i, code_no[i]))
     print('File size: {}'.format(total_size))
     for i in code_no:
         if code_no[i]:
