@@ -2,7 +2,7 @@
 '''Decodes a utf-8 string'''
 
 
-def validASCII(data: list[int]):
+def validASCII(data):
     '''Checks if data is a valid utf-8 character'''
     try:
         bin_list = []
