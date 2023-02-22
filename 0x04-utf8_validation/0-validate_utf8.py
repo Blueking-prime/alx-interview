@@ -34,6 +34,9 @@ def convert_to_string(code_point):
 
 def validUTF8(data):
     '''Checks if data is valid in UTF-8'''
+    if type(data) is not list:
+        return False
+
     for i in range(len(data)):
         check = check_lead(data[i])
         try:
