@@ -109,17 +109,21 @@ def print_output():
             y, x = pair
             out_list_list[idx].append([y, x])
         idx += 1
+
+    new_out_list_list = []
     for i in out_list_list:
+        new_out_list_list.append(sorted(i, key=lambda x: x[0]))
+    for i in new_out_list_list:
         print(i)
 
 
 # Main Code here:
-if len(sys.argv) != 3:
+if len(sys.argv) != 2:
     print('Usage: nqueens N')
     sys.exit(1)
 
 try:
-    n = int(sys.argv[2])
+    n = int(sys.argv[1])
     if type(n) != int:
         print('N must be a number')
         sys.exit(1)
