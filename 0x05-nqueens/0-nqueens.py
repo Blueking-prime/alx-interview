@@ -127,7 +127,7 @@ try:
     if type(n) != int:
         print('N must be a number')
         sys.exit(1)
-except ValueError:
+except Exception:
     print('N must be a number')
     sys.exit(1)
 
