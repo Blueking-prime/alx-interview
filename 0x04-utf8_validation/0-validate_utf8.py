@@ -37,6 +37,8 @@ def validUTF8(data):
     if type(data) is not list:
         return False
 
+    # Add convert to binary then truncate and convert back section
+
     for i in range(len(data)):
         check = check_lead(data[i])
         try:
