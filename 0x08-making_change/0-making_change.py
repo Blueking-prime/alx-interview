@@ -10,7 +10,7 @@ def makeChange(coins, total):
     coins.sort()
     no = 0
     i = len(coins) - 1
-    while i > 0:
+    while i >= 0:
         if total - coins[i] >= 0:
             no += 1
             total -= coins[i]
