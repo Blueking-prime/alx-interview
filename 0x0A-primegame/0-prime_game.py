@@ -35,6 +35,9 @@ def isWinner(x, nums):
     i = 0
     b = 0
     m = 0
+    if i > len(nums):
+        return None
+
     while i < x:
         if round_winner(nums[i]) % 2 == 0:
             b += 1
@@ -42,7 +45,10 @@ def isWinner(x, nums):
             m += 1
         i += 1
 
-    if b < m or (b == 0 and m == 0):
+    # if b == 0 and m == 0:
+    #     return None
+
+    if b < m:
         return 'Maria'
     else:
         return 'Ben'
