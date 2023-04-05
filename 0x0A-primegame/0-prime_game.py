@@ -45,7 +45,7 @@ def isWinner(x, nums):
             m += 1
         i += 1
 
-    if b == 0 and m == 0:
+    if b == m:
         return None
 
     if b < m:
