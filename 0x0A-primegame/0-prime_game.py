@@ -2,7 +2,7 @@
 '''Find the winner of a prime game'''
 
 
-def is_prime(i: int):
+def is_prime(i):
     '''Checks if a number is prime'''
     if i == 1:
         return False
@@ -19,7 +19,7 @@ def is_prime(i: int):
     return True
 
 
-def round_winner(num: int):
+def round_winner(num):
     '''Determines who wins a round'''
     wins = 0
     num_list = list(range(num))
@@ -30,7 +30,7 @@ def round_winner(num: int):
     return wins
 
 
-def isWinner(x: int, nums: list[int]):
+def isWinner(x, nums):
     '''Determines the winner of the game'''
     i = 0
     b = 0
